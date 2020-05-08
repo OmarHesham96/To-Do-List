@@ -1,0 +1,24 @@
+<html lang='en'>
+    <head>
+        <title>To Do List</title>
+    </head>
+    <body>
+        <h2>Welcome This is TO DO LIST</h2>
+        <ol>
+           <% for(var i = 0; i < todoList.length; i++) { %>
+                <li> <%= todoList[i] %></li>
+            <% } %>
+            
+        </ol>
+
+        <form action="/newtodo" method="POST">
+            <label>Enter Your Task</label>
+            <input type="text" name="task"><br><br>
+            <input type="submit" value="Submit"> 
+        </form>
+        <form action="/re" method="POST">
+            <input type="submit" value="Remove"> 
+        </form>
+
+    </body>
+</html>
