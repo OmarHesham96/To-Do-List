@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 
+const port = process.env.PORT || 3000
+
 var todoList = [ ]
 
 app.get('/', (req,res) => {
@@ -30,6 +32,6 @@ app.get('*', (req,res) => {
     res.send('<h1>Error</h1>');
 });
 
-app.listen('3000', () => {
-    console.log(`Server started on 3000`);
+app.listen(port, () => {
+    console.log(`Server started on` + port);
 });
